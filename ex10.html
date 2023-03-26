@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coworkers = {
+            "Key_A": "1",
+            "Key_B": "2"
+        };
+        document.write(coworkers.Key_A + "<br>");
+        document.write(coworkers.Key_B + "<br>");
+        //挿入
+        coworkers.Key_C = "3";
+        document.write(coworkers.Key_C + "<br>");
+        coworkers["Key_D"] = "4";
+        document.write(coworkers.Key_D + "<br>");
+    </script>
+
+    <h2>Iterate</h2>
+    <script>
+        for (var key in coworkers) {
+            document.write(key + ':' + coworkers[key] + '<br>');
+        }
+    </script>
+    <h2>property & method</h2>
+    <script>
+        //関数定義 - 方法_01
+        // coworkers.showall = function(){}
+        //関数定義 - 方法_02
+        // function showall(){}
+
+        coworkers.showall = function () {
+            for (var key in this) {
+                document.write(key + ':' + this[key] + '<br>');
+            }
+        }
+        coworkers.showall();
+    </script>
+</body>
+
+</html>

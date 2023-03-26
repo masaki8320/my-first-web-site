@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-    
+
 <head>
     <title>WEB!</title>
     <meta charset="utf-8">
+    <!-- 別ファイル参照 - CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- 別ファイル参照 - JS -->
+    <script src = "colors.js"></script>
 </head>
 
 <body>
     <h1><a href="index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
     <div id="grid">
         <ol>
             <li><a href="1.html" class="saw">HTML</a></li>
@@ -23,4 +29,5 @@
         </div>
     </div>
 </body>
+
 </html>
